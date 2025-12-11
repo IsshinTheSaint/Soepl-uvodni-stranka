@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.top-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.school-name h1 {
+    font-size: 1.5rem;
+    color: #003366; 
+    text-transform: uppercase;
+}
+
+.school-name p {
+    color: #666;
+}
+
+.search-box input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #004080; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #00264d;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('/Removal-193.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #e6b800; 
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.news-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #004080;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news-item .date {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.news-item h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #004080;
+    font-weight: bold;
+}
+
+aside h3 {
+    border-bottom: 2px solid #004080;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-btn {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.link-btn:hover {
+    transform: translateY(-2px);
+}
+
+.link-btn.blue { background-color: #0056b3; }
+.link-btn.green { background-color: #28a745; }
+.link-btn.grey { background-color: #6c757d; }
+
+.sidebar-box {
+    margin-top: 30px;
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 40px 0 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+footer h4 {
+    color: white;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.copyright {
+    background-color: #111;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr; 
+    }
+}
